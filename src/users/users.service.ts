@@ -3,7 +3,7 @@ import {InjectModel} from "@nestjs/sequelize";
 import {User} from "./user.model";
 import {CreateUserDto} from "./dto/create-user.dto";
 import {RolesService} from "../roles/roles.service";
-import {AddRoleDto} from "./dto/add-role.dto";
+import {GrantRoleDto} from "./dto/grant-role.dto";
 import {BanUserDto} from "./dto/ban-user.dto";
 
 
@@ -35,7 +35,7 @@ export class UsersService {
         return user;
     }
 
-    async addRole(dto: AddRoleDto) {
+    async addRole(dto: GrantRoleDto) {
         const user = await this.userRepository.findByPk(dto.userId);
         const role = await this.roleService.getRoleByValue(dto.value);
 
