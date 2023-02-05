@@ -12,7 +12,7 @@ async function  start() {
         .setTitle('Nestjs Tutorial')
         .setDescription('REST API Documentation')
         .setVersion('1.0.0')
-        .addTag('ULBI TV')
+        .addTag('App')
         .build();
 
     const document = SwaggerModule.createDocument(app, swaggerConfig);
